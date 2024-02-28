@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="coundown.css">
+    <title>Countdown Timer</title>
+
+  </head>
+  <body>
+    <section class="section-center">
+      <!-- image -->
+      <article class="giftimg">
+        <img src="img_iphone.jpg" alt="iphone" />
+      </article>
+      <!-- info -->
+      <article class="gift-info">
+        <h1>GIVEAWAY FOR 10 IPHONES</h1>
+        <h2>"YOU SNOOZE YOU LOOSE"</h2>
+        <h4 class="giveaway">
+          Giveaway ends on Sunday, 24 April 2023, 11:00am
+        </h4>
+        <p class="word">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>
+          Reprehenderit molestiae cum libero atque ut voluptate qui consectetur<br>
+          aliquid incidunt voluptatem quos, dolore, non commodi quaerat aliquam<br>
+          eligendi, quisquam totam blanditiis.
+          
+
+          <!-- javascript -->
+    <script src="countdown.js"></script>
+    <script>
+      // Set the date we're counting down to 
+      var countDownDate = new Date("Mar 15, 2024 00:00:00").getTime();
+      
+      // Update the countdown every second
+      var x = setInterval(function() {
+      
+          // Get today's date and time
+          var now = new Date().getTime();
+      
+          // Find the distance between now and the countdown date
+          var distance = countDownDate - now;
+      
+          // Calculations for days, hours, minutes, and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+          // Display the result in the element with id="countdown"
+          document.getElementById("countdown").innerHTML = days + "days " + hours + "hours" + "  "
+          + minutes + "minutes" + "  " + seconds + "seconds" + "  ";
+      
+          // If the countdown is over, display a message
+          if (distance < 0) {
+              clearInterval(x);
+              document.getElementById("countdown").innerHTML = "EXPIRED";
+          }
+      }, 1000);
+      </script>
+      </head>
+      <body>
+      
+      <h3>Iphone Giveaway Countdown</h3>
+      <p id="countdown"></p>
+      
+      </body>
+      </html>
+      </body>
+      </html>
+      </body>
+      </html>
+</body>
+</html>
